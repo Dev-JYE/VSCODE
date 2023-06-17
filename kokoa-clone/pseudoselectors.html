@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <title>pseudo selectors</title>
+    <style>
+       body{
+            height: 1000vh;
+            margin: 50px;
+        }
+        /* div{
+            /* position:fixed; */
+            /* position fixed: 화면을 내려도 계속 같은 위치에 있음 */
+            /* width: 150px; */
+            /* height:150px; */
+            /* background-color: wheat; */
+            /* position:relative; */
+            /* position:static은 default값 */
+
+        /* } */
+        span{
+            color: white;
+            padding:5px;
+            border-radius: 10px;
+            background-color: red;
+        }
+        /* span:nth-child(even){
+            background-color: violet;
+        } */
+        /* 3n_+1, 4n,2n등으로 숫자를 지정할 수 있음 */
+        p span{
+            color:blue
+        }
+        div >span{
+            text-decoration: underline;
+            /* div > span div의 바로 밑 자식 */
+        }
+        p + span{
+            text-decoration: dashed;
+            /* p + span p 바로 다음으로 형제인 span에게만 적용 */
+            /* p ~ span p 바로 다음으로 span이 오지 않을 경우 */
+        }
+        input:required{
+            border: 1px solid tomato;
+        }
+        input[type="password"]{
+            background-color: teal;
+        }
+        input[placeholder~="name"]{
+            background-color: blueviolet;
+        }
+        /* placeholder에 name이라는 단어를 포함한 모든 input의 배경색 변경 */
+    </style>
+    </head>
+    <body>
+        <div>
+        <span>HELLO</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quod commodi et wequi ipsam odio dolrem. <span>inside</span></p>
+        </div>
+        <form>
+            <input type="text" placeholder="first name">
+            <input type="text" placeholder="last name">
+            <input type="password" required placeholder="password">
+        </form>
+    </body>
+</html>

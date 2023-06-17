@@ -1,0 +1,46 @@
+body{
+    height: 100vh;
+    display: inline-flex;
+    font-family: 'Times New Roman', Times, serif;
+    flex-direction: column;
+    align-items:center;
+    background-color: whitesmoke;
+    justify-content: space-between;
+}
+header{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+div{
+    width: 500px;
+    height: 500px;
+    left:10px;
+}
+.firstrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.colorbox{
+    width: auto;
+}
+.colorbox:first-child{
+    background-color: tomato;
+}
+.colorbox:nth-child(2){
+    background-color: teal;
+}
+.colorbox:nth-child(3){
+    background-color: burlywood;
+}
+.colorbox:last-child{
+    background-color: thistle;
+}
+.colorinfo{
+    width:500px;
+    background-color: white;
+
+}

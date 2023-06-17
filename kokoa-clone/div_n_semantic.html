@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="kr"> <!-- lang을 사용하는 이유: 네이버/구글 등에 해당 웹사이트가 사용하는 언어를 알려주기 위함-->
+    <head> <!--웹사이트의 내용에는 영향을 미치지 않지만 사이트 부가정보 설정할 수 있음-->
+        <link
+        rel="shortcut icon"
+        sizes="16x16 32x32 64x64"
+        href="https://nomadcoders.co/m.png"/>
+        <!--타이틀 옆 아이콘 설정 코드-->
+        <title> Home - MY FIRST WEBSITE </title>
+        <meta charset="utf-8">
+        <meta name="description" content="It's my website">
+        <!--meta는 부가적 정보를 전달하는 태그 charset='utf-8'은 특히 중요!-->
+        <meta property="og:image" content="z0guri.jpg"
+    </head>
+    <body>
+        <!--header/main/footer 는 모두 semantic 태그(의미가 있는 태그).document와 content를 구분하기 훨씬 쉬워짐-->
+        <!-- div id="header"로 주는 것 보다는 header로 주는 게 이해하기 쉽고 빠름-->
+        
+        <H1>
+            SAY HI
+        </H1>
+        <img src="z0guri.jpg">
+        <p> 귀여운 도구리 CUTE DOGURI </p><br>
+        <pre> 귀여운 도구리 CUTE DOGURI</pre>
+        <p>Mein Name ist <abbr title="Z0 Silver">ZS!</abbr></p>
+        ZS 아래에 밑줄이 생기고 마우스를 위에 얹으면 Z0 Silver가 표시됨
+        <cite> Zoroaster Says</cite><br>
+        <code> For i in range(i): Zoroaster Says</code>
+        <p>I like <mark>Strawberries</mark></p>
+        <p>I like <strong>Strawberries</strong></p>
+        <p>2<sup>5</sup></p>
+        <form>
+            <label for="profile"> Profile Photo</label>
+            <!-- <input type="color"> -->
+            <input id="profile" type="file" accept="image/*">
+            <!-- accept로 지정된 파일 형식만 올릴 수 있게 할 수 있음 짱이다 .doc,.docx,.xlsx하면 엑셀/워드만 되고 image/* 하면 png jpg 다 됨-->
+            
+            <label for="WEBSITE">WEBSITE</label>
+            <input id="WEBSITE" required placeholder="WEBSITE" type="url">
+
+            <div>
+            <input disabled placeholder="Last Name" type="text" ></div>
+            <div>
+            <input required placeholder="UserName" type="text"></div>
+            <div>
+            <input required placeholder="Password" minlength="10" type="password"></div>
+            <input type="submit" value="Create Account"></div>
+        </form>
+    </body>
+</html>

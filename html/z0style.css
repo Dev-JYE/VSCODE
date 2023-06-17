@@ -1,0 +1,46 @@
+@import url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+@import url('http://fonts.cdnfonts.com/css/billabong');
+
+summary{
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+    margin-top: 50px;
+}
+body{
+    width:100vh;
+    height:100vh;
+}
+.atag_link{
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+    /* a태그를 가운데정렬시키고 싶을 때는 div 클래스를 지정한 뒤 거기에 style 적용하는 게 더 좋음 */
+}
+.header{
+    text-align: left;
+    margin-top:20px;
+    margin-bottom: 20px;
+    font-family:'billabong';
+    font-size: 30px;
+}
+.div_details{
+    text-align:center;
+    margin-top: 50px;
+    padding: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+body{
+    font-family: 'Galmuri9';
+}
+input[type=text]{
+    position: fixed;
+    width: 250px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    margin-left: 350px;
+}

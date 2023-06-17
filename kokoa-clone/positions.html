@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <title>position:fixed/relative/absolute</title>
+    <style>
+        body{
+            height: 1000vh;
+            margin: 50px;
+        }
+        div{
+            /* position:fixed; */
+            /* position fixed: 화면을 내려도 계속 같은 위치에 있음 */
+            width: 300px;
+            height: 300px;
+            background-color: wheat;
+            position:static;
+            /* position:static은 default값 */
+
+        }
+        /* #different{
+            top:5px;
+            /* 0번 레이어에 있게 함 */
+            /* position: fixed; */
+            /* position fixed: 다른 레이어에 위치하게 함 */
+            /* background-color: wheat;
+            width:350px;  */
+        /* } */
+        .green{
+            background-color: teal;
+            height: 100px;
+            width: 100px;
+            /*position:relative element가 처음위치한 곳을 기준으로 top,bottom,left,right을 수정 */
+            position:absolute;
+            /* position absolute: 가장 가까운 relative 부모를 기준으로 이동시킴 */
+            /* green보다 상위 태그의 position이 relative가 아닐 경우 body를 기준으로 이동 */
+        }
+        .purple{
+            background-color: purple;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            top: 100px;
+            left:100px;
+        }
+    </style> 
+    </head>
+    <body>
+        <div>
+            <div class="green">
+                <div class="purple"></div>
+            </div>
+        </div>
+    </body>
+</html>

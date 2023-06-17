@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <title>ID & CLASS & PADDING &BLOCK& INLINE</title>
+        <link href="styles.css" rel="stylesheet">
+        <style>
+            *{
+                border: 2px dashed black;
+
+            }
+            /* 모든 태그에 적용할 수  있게 함 */
+            html{
+                background-color: gray;
+            }
+            body{
+                margin: 20px;
+                /* top right bottom left */
+                background-color: blueviolet;
+                /* margin:0; /*을 하면 위쪽 배경에 토마토가 보이던 것이 거의 안 보임 */
+                /* collapse Margin: 상하에서만 발생, div margin이 body margin과 만났을 경우 더 큰 마진 값으로 상쇄해 렌더링함  */
+                /* margin: box의 경계로부터 '바깥'에 있는 공간 */
+                padding: 10px;
+                /* padding: box의 경계로부터 '안쪽'에 있는 공간 */
+            }
+            h1{
+                color:Gray;
+                font-size:20px;
+                font-weight:bold;
+                font-style: italic;
+            }
+            div{
+                padding:20px;
+                /* display: inline; */
+                /* inline은 높이와 너비가 없음 */
+                /* <!-- css에서 display property로 인라인과 블록을 변경할 수 있음 --> */
+                border: 2px solid black;
+            }
+            #first{
+                background-color: whitesmoke;
+                width:150px;
+                height:150px;
+            }
+            #second{
+                background-color: teal;
+                width:100px;
+                height:100px;
+            }
+            #third{
+                background-color: wheat;
+                width:50px;
+                height:50px;
+            }
+            #fourth{
+                background-color: tomato;
+                width:25px;
+                height:25px;
+            }
+            span{
+                background-color: turquoise;
+                margin:20px;
+                /* 좌우만 적용 가능함. MARGIN을 적용하고 싶으면 INLINE 태그를 BLOCK으로 변환해야 함 */
+                padding: 30px;
+                /* 패딩은 상하좌우 모두 적용 가능함 */
+            }
+            .tomato{
+                /* class pointer는 . id pointer는 # */
+                background-color: tomato;
+            }
+            .wheat{
+                border: 10px solid wheat;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <header>
+            <h1>The Z0 Times</h1>
+        </header>
+        <main>
+            <address>Honey Duke Hwaeum shop</address>
+        </main>
+        <div></div>div/article/main/section/footer/p 등의 block은 옆에 뭐가 오지 않음  -->
+        <!-- <span>Hello</span>span은 옆에 올 수 있음 -->
+        <!-- <a href="#">LINK</a> link와 span은 박스가 아니고 inline(같은 줄에 있을 수 있는 in the same line의 줄임말)이기 때문 -->
+        <!-- 대부분의 박스들은 block이기에 inline(span,a,img 등)을 기억하는게 더 나음 -->
+        <!-- <div>BOX는 높이와 너비가 있고 세가지 속성을 가지고 있음(margin,border,padding)<br> -->
+            <!-- margin:box의 border(경계)로부터 바깥에 있는 공간<br> -->
+        <!-- </div> -->
+
+        <div id="first">
+            <div id="second">
+                <div id="third">
+                    DIV
+                    <span>SPAN</span>
+               </div>
+            </div>
+        </div>
+        <div class="tomato">
+            <div class="tomato wheat">
+                <!-- 한번에 여러개의 클래스를 가질 수 있음 -->
+                <div class="tomato"></div>
+            </div>
+        </div>
+    </body>
+</html>

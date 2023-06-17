@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <title>states</title>
+        <style>
+            button:hover{
+                background-color: tomato;
+            }
+            button:active{
+                background-color: teal;
+            }
+            button:focus{
+                background-color: blue;
+            }
+            a:visited{
+                color: green;
+            }
+            a:hover{
+                color:pink;
+            }
+            form{
+                border: 10px solid salmon;
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+                /* border에서 안쪽으로 20px! */
+            }
+            form:focus-within{
+                /* input 중 하나가 focus되면 form의 모습을 변경 */
+                border-color: seagreen;
+            }
+            form:hover input{
+                /* form에 마우스가 올라 갔을 때 input의 색이 바뀜 */
+                background-color: sienna;
+            }
+            form:hover input:focus{
+                /* form에 hover되고 input에 포커스가 되지 않으면 배경색은 sienna임 */
+                background-color: purple;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="https://www.naver.com/" target="_blank"> Friendly Naver</a>
+        <div>
+            <button>HELLO</button>
+        </div>
+        <form>
+            <input type="text" name="" id="">
+            <input type="text" name="" id="">
+            <input type="text" name="" id="">
+        </form>
+    </body>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <title>Inline block & FLEX BOX</title>
+        <style>
+            body{
+                height: 100vh;
+                /* vh:viewport height: 스크린 */
+                /* body의 높이가 박스 크기와 같아서 임의로 설정함 */
+                display: flex;
+                /* flexbox는 자식 엘리먼트에 직접 적용하는 게 아니라 부모 element에 적용해야함 */
+                justify-content: space-between;
+                /* justify content는 주축에 적용됨 (기본적으로는 수평)*/
+                align-items:center;
+                /* align items는 교차축에 적용됨! (기본적으로는 수직) */
+                flex-direction: column;
+                /* flex-direction: 주축과 교차축을 바꿈 */
+                flex-wrap: wrap;
+                /* 창을 줄이면 1/3 밑에 그리핀도르 박스 있음 */
+            }
+            div{
+                /* display: inline-block은  인라인이지만, 블록으로 인식하게 함 높이도 가질 수 있고 margin을 상하좌우에 적용할 수 있으며 바로 옆에 다른 요소가 올 수도 있음*/
+                /* 그러나 많은 문제가 있음(요소 사이에 빈 공간이 생김,정해진 형식이 없음) */
+                /* 무엇보다도 반응형 디자인을 지원하지 않아 창을 움직이면 크기가 변화함*/
+                width:200px;
+                height: 200px;
+                background-color: #1A472A;
+                display: flex;
+                /* div 태그 내에 글자가 생겨서 flex 사용할 수 있음 */
+                justify-content: center;
+                font-size: 30px;
+                color: white;
+                font-weight: bold;
+                align-items: center;
+
+            }
+            #gryffindor{
+                background-color: #7F0909;
+            }
+        </style>
+    </head>
+    <body>
+        <div>SLYTHERIN 1</div>
+        <div id="gryffindor">GRYFFINDOR</div>
+        <div>SLYTHERIN 3</div>
+    </body>
